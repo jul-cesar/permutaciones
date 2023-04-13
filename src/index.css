@@ -1,5 +1,5 @@
 body{
-  background-color: gray;
+  background-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
 }
@@ -10,7 +10,7 @@ body{
   justify-content: center;
   align-items: center; 
   height: 70vh;
-  width: 100% ;
+  width: 100% gut;
 }
 .resultado{
   display: flex;
