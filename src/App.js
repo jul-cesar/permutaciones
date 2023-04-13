@@ -6,7 +6,7 @@ function App() {
   const [render, setRender] = useState([]);
 
   function posiblesPermus(num) {
-    const numeros = num.toString().split("");
+    const numeros = Array.from(num.toString())
     let resul = new Set();
 
     const cambiar = (a, b) => {
@@ -17,7 +17,7 @@ function App() {
 
     function generar(n) {
       if (n === 1) {
-        resul.add(parseInt(numeros.join("")));
+        resul.add(numeros.join(""));
       } else {
         for (let i = 0; i < n; i++) {
           generar(n - 1);
