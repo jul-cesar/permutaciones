@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={submitForm}>
+      <form className="resultado" onSubmit={submitForm}>
         <label htmlFor="valor">Ingresa un numero: </label>
         <input
           required
