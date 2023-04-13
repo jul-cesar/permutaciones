@@ -56,7 +56,7 @@ function App() {
           required
           type="text"
           minlength="3"
-          maxlength="4"
+          maxlength="3"
           name="valor"
           onChange={(e) => setNum(e.target.value)}
         ></input>
