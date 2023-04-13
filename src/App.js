@@ -7,7 +7,7 @@ function App() {
 
   function posiblesPermus(num) {
     const numeros = num.toString().split("");
-    let resul = [];
+    let resul = new Set();
 
     const cambiar = (a, b) => {
       const first = numeros[a];
@@ -17,17 +17,17 @@ function App() {
 
     function generar(n) {
       if (n === 1) {
-        resul.push(parseInt(numeros.join("")));
+        resul.add(parseInt(numeros.join("")));
       } else {
         for (let i = 0; i < n; i++) {
           generar(n - 1);
-          cambiar(i, n);
+          cambiar(n % 2 ?  0 : i, n - 1);
         }
       }
     }
 
     generar(numeros.length);
-    return resul;
+    return [...resul];
   }
 
   function submitForm(e) {
